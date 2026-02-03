@@ -16,4 +16,4 @@ The system emphasizes service autonomy through deliberate domain partitioning, t
 
 ## Overview of Distributed System Ownership
 
-![Overview](https://drive.google.com/file/d/19cVdJoV-7-NGJd-0b7C4aS3qi1OOnm4o/view?usp=sharing)
+![Overview](https://github.com/programmeralek/EventDrivenStore/blob/main/EDS_Architecturial_Diagram.drawio.png)
