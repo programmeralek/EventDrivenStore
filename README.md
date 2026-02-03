@@ -35,7 +35,7 @@ The system emphasizes service autonomy through deliberate domain partitioning, t
 
 Each of these specifications can be validated through the following diagram:
 
-![Overview](https://github.com/programmeralek/EventDrivenStore/blob/main/EDS_Architecturial_Diagram.drawio.png)
+![Overview](https://github.com/programmeralek/EventDrivenStore/blob/main/KnowledgeBase/EDS_Architecturial_Diagram.drawio.png)
 
 ## Design Patterns & Architectural Principles Demonstrated
 
@@ -49,5 +49,5 @@ This project intentionally demonstrates multiple distributed-systems design patt
 #### 6. Polyglot Microservices
 
 
-Each pattern is described using the STAR methodology (Situation, Task, Action, Result) to clearly articulate design intent and outcomes in a detailled manner in <a href="https://github.com/programmeralek/EventDrivenStore/blob/main/STAR_specified_design_patterns.md" target="_blank">STAR_specified_design_patterns.md</a>
+Each pattern is described using the STAR methodology (Situation, Task, Action, Result) to clearly articulate design intent and outcomes in a detailled manner in <a href="https://github.com/programmeralek/EventDrivenStore/blob/main/KnowledgeBase/STAR_specified_design_patterns.md" target="_blank">STAR_specified_design_patterns.md</a>
 
