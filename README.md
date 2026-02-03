@@ -12,3 +12,8 @@ The system emphasizes service autonomy through deliberate domain partitioning, t
 | Orders Service | [`eds-orders`](https://github.com/programmeralek/eds-orders) | Owns order creation and persistence, and emits immutable domain events | Java 25 / Spring Boot / MySQL |
 | Inventory Service | [`eds-inventory`](https://github.com/programmeralek/eds-inventory) | Owns inventory state and stock decisions, reacting to order-related domain events | .NET / C# / MSSQL |
 | Billing Service | [`eds-billing`](https://github.com/programmeralek/eds-billing) | Owns billing and payment workflows, reacting asynchronously to domain events | Node.js / Docker / MariaDB |
+
+
+## Overview of Distributed System Ownership
+
+![Overview](https://drive.google.com/file/d/19cVdJoV-7-NGJd-0b7C4aS3qi1OOnm4o/view?usp=sharing)
