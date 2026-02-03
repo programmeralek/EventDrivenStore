@@ -50,4 +50,41 @@ This project intentionally demonstrates multiple distributed-systems design patt
 
 
 Each pattern is described using the STAR methodology (Situation, Task, Action, Result) to clearly articulate design intent and outcomes in a detailled manner in <a href="https://github.com/programmeralek/EventDrivenStore/blob/main/KnowledgeBase/STAR_specified_design_patterns.md" target="_blank">STAR_specified_design_patterns.md</a>
+## Deployment Strategy
 
+This project documents its deployment model as a first-class architectural concern.  
+Rather than hiding deployment decisions inside scripts or tooling, they are explicitly described and versioned alongside the codebase.
+
+The deployment strategy is broken down into the following sections:
+
+### 1. Core Deployment Philosophy  
+Describes the foundational principles behind how services are deployed, why service autonomy is enforced, and why shared deployment units were intentionally avoided.  
+📄 [`core-deployment-philosophy.md`](KnowledgeBase/Deployment/1.coreDeploymentPhilosophy.md)
+
+### 2. What Actually Gets Deployed  
+Clarifies what is deployed versus what is not, distinguishing between services, infrastructure dependencies, runtime artifacts, and execution boundaries.  
+📄 [`what-actually-gets-deployed.md`](KnowledgeBase/Deployment/2.whatActuallyGetsDeployed.md)
+
+### 3. One Dockerfile per Service  
+Explains why each service owns its own Dockerfile, how this enables independent lifecycle management, and why this is critical for elasticity and failure isolation.  
+📄 [`one-dockerfile-per-service.md`](KnowledgeBase/Deployment/3.oneDockerfilePerService.md)
+
+### 4. Environment Configuration Strategy  
+Details how environment-specific configuration is handled across local development, CI, and production without leaking infrastructure concerns into business logic.  
+📄 [`environment-configuration-strategy.md`](KnowledgeBase/Deployment/4.environmentConfigurationStrategy.md)
+
+### 5. Service Startup and Dependency Order  
+Documents how services are allowed to start independently, why strict startup ordering is avoided, and how eventual consistency is embraced at runtime.  
+📄 [`service-startup-and-dependency-order.md`](KnowledgeBase/Deployment/5.serviceStartupAndDependencyOrder.md)
+
+### 6. Scaling Strategy  
+Covers how services are expected to scale independently, what components are stateless versus stateful, and how the architecture supports horizontal scaling.  
+📄 [`scaling-strategy.md`](KnowledgeBase/Deployment/6.ScalingStrategy.md)
+
+### 7. Failure and Recovery Behavior  
+Explains how the system behaves under partial failure, including consumer retries, idempotency, outbox recovery, and service restarts.  
+📄 [`failure-and-recovery-behavior.md`](KnowledgeBase/Deployment/7.failureAndRecoveryBehavior.md)
+
+### 8. Deployment and CI/CD Readiness  
+Outlines how the system is prepared for automated pipelines, container-based delivery, and future cloud-native deployment without architectural rewrites.  
+📄 [`deployment-and-cicd-readiness.md`](KnowledgeBase/Deployment/8.deploymentAndCiCdReadiness.md)
