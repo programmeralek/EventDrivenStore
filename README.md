@@ -88,3 +88,40 @@ Explains how the system behaves under partial failure, including consumer retrie
 ### 8. Deployment and CI/CD Readiness  
 Outlines how the system is prepared for automated pipelines, container-based delivery, and future cloud-native deployment without architectural rewrites.  
 📄 [`deployment-and-cicd-readiness.md`](KnowledgeBase/Deployment/8.deploymentAndCiCdReadiness.md)
+
+## Data Structures & Persistence
+
+This project documents data ownership explicitly to reinforce database-per-service boundaries and to make the Saga workflow traceable across stores.
+
+### Data Documentation
+
+1. [Data Ownership and Boundaries](KnowledgeBase/Data/1.data-ownership-and-boundaries.md) 
+
+2. [Orders Service Data Model (MySQL)](KnowledgeBase/Data/2.orders-data-model.md)
+
+3. [Inventory Service Data Model (MSSQL)](KnowledgeBase/Data/3.inventory-data-model.md)
+
+4. [Billing Service Data Model (MariaDB)](KnowledgeBase/Data/4.billing-data-model.md)
+
+5. [Cross-Cutting Persistence Tables (Outbox + Idempotency)](KnowledgeBase/Data/5.cross-cutting-tables-outbox-idempotency.md)
+
+6. [Migrations and Schema History Strategy](KnowledgeBase/Data/6.migrations-and-schema-history.md)
+
+## Local Setup Guide
+
+This repo includes a step-by-step guide to run the system locally and verify the full Saga path through Kafka and the service-owned databases.
+
+## Local Setup Guide
+
+1. [Prerequisites](KnowledgeBase/LocalSetupGuide/1.prerequisites.md)
+
+2. [Infrastructure Startup](KnowledgeBase/LocalSetupGuide/2.infrastructure-startup.md)
+
+3. [Service Startup](KnowledgeBase/LocalSetupGuide/3.service-startup.md)
+
+4. [Smoke Tests and Verification](KnowledgeBase/LocalSetupGuide/4.smoke-tests-and-verification.md)
+
+5. [Troubleshooting](KnowledgeBase/LocalSetupGuide/5.troubleshooting.md)
+
+
+
