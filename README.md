@@ -16,4 +16,37 @@ The system emphasizes service autonomy through deliberate domain partitioning, t
 
 ## Overview of Distributed System Ownership
 
+
+### 1.	Client → Gateway
+####	•	Synchronous HTTP boundary
+####	•	Routing resolved dynamically via Eureka
+### 2.	Gateway → Domain Services
+####	•	No hardcoded URLs
+####	•	Service discovery enables elasticity
+### 3.	Domain Services → Kafka
+####	•	Domain events are emitted, not commands
+####	•	Services never call each other directly
+### 4.	Kafka → Domain Services
+####	•	Services consume only what they own
+####	•	No shared state, no implicit dependencies
+### 5.	Each Service → Its Own Database
+####	•	Local transactions only
+####	•	State changes are private and protected
+
+Each of these specifications can be validated through the following diagram:
+
 ![Overview](https://github.com/programmeralek/EventDrivenStore/blob/main/EDS_Architecturial_Diagram.drawio.png)
+
+## Design Patterns & Architectural Principles Demonstrated
+
+This project intentionally demonstrates multiple distributed-systems design patterns, each implemented end-to-end in a realistic, production-style manner.
+
+#### 1. Event-Droven Architecture
+#### 2. Saga Pattern (Choreography Based)
+#### 4. Database-per-Service
+#### 4. Outbox Pattern (Transactional Messaging)
+#### 5. Idempotent Consumers (ACID Principles)
+#### 6. Polyglot Microservices
+
+
+Each pattern is described using the STAR methodology (Situation, Task, Action, Result) to clearly articulate design intent and outcomes in a detailled manner in [STAR_specified_design_patterns.md](https://github.com/programmeralek/EventDrivenStore/blob/main/STAR_specified_design_patterns.md)
