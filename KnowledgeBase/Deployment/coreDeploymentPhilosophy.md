@@ -19,7 +19,7 @@ There is no shared deployment unit.
 
 ### Principle #2 - Infrastructure as Contracts, Not Coupling
 
-I separated infrastructure concerns into reusable building blocks:
+I separated infrastructure concerns into reusable building blocks [in this very same repo ](https://github.com/programmeralek/EventDrivenStore/tree/main/infrastructure):
 ```
 infrastructure/
 ├── kafka-compose.yml
@@ -38,3 +38,18 @@ Each file represents:
 * Replace it later with managed services (MSK, RDS, Azure SQL, etc.)
 * Keep services unchanged
 
+### Principle #3 - Event First Deployment
+
+The services do not depend on each other to boot.
+
+They depend only on:
+* Kafka
+* Their own database
+* Eureka (for HTTP exposure via Gateway)
+
+This means:
+* We can deploy services in any order
+* Partial system startup is valid
+* Failures don’t block the entire system
+
+This is critical in production.
