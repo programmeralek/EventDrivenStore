@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  eureka:
+    image: steeltoeoss/eureka-server:latest
+    container_name: eds-eureka
+    ports:
+      - "8761:8761"
+    environment:
+      SPRING_APPLICATION_NAME: "eureka-server"
+      MANAGEMENT_ENDPOINT_ENV_ENABLED: "true"
+      MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,env"
+    volumes:
+      - ./eureka-application.yml:/config/application.yml:ro

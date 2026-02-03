@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  inventory-mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: eds-inventory-mssql
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "AStrong!Passw0rd"
+    volumes:
+      - inventory_mssql_data:/var/opt/mssql
+
+volumes:
+  inventory_mssql_data:
