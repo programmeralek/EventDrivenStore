@@ -49,4 +49,6 @@ This project intentionally demonstrates multiple distributed-systems design patt
 #### 6. Polyglot Microservices
 
 
-Each pattern is described using the STAR methodology (Situation, Task, Action, Result) to clearly articulate design intent and outcomes in a detailled manner in [STAR_specified_design_patterns.md](https://github.com/programmeralek/EventDrivenStore/blob/main/STAR_specified_design_patterns.md)
+Each pattern is described using the STAR methodology (Situation, Task, Action, Result) to clearly articulate design intent and outcomes in a detailled manner in 
+<a href="https://github.com/programmeralek/EventDrivenStore/blob/main/STAR_specified_design_patterns.md" target="_blank">STAR_specified_design_patterns.md</a>
+
